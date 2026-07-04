@@ -1,0 +1,21 @@
+name: EternaStats
+version: '1.0.0'
+main: net.eternasmp.stats.StatsPlugin
+api-version: '1.21'
+author: THC
+softdepend: [Vault]
+
+commands:
+  stats:
+    description: Open the stat upgrade menu
+    usage: /stats
+  statsadmin:
+    description: Admin commands for EternaStats
+    usage: /statsadmin <reset|set|reload> <player> [stat] [level]
+    permission: eternastats.admin
+    permission-message: You don't have permission to use this command.
+
+permissions:
+  eternastats.admin:
+    description: Access to EternaStats admin commands
+    default: op

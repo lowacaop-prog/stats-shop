@@ -1,0 +1,12 @@
+net/eternasmp/stats/StatsListener$1.class
+net/eternasmp/stats/StatsCommand.class
+net/eternasmp/stats/StatsManager.class
+net/eternasmp/stats/StatsGUI$ToggleHolder.class
+net/eternasmp/stats/StatsListener.class
+net/eternasmp/stats/StatsPlugin.class
+net/eternasmp/stats/StatsGUI$MainHolder.class
+net/eternasmp/stats/StatType.class
+net/eternasmp/stats/StatsManager$PurchaseResult.class
+net/eternasmp/stats/StatsAdminCommand.class
+net/eternasmp/stats/PlayerStatData.class
+net/eternasmp/stats/StatsGUI.class

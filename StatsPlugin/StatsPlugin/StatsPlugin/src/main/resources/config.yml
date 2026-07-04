@@ -1,0 +1,37 @@
+# EternaStats configuration
+# Cost formula per level: base * (multiplier ^ (level - 1))
+# With base 1,600,000 and multiplier 1.6, level 10 costs ~$110.5M
+# and the full 10-level climb for ONE stat costs ~$292M.
+# Six stats at this curve totals ~$1.75 billion server-wide.
+
+cost:
+  base: 1600000
+  multiplier: 1.6
+  max-level: 10
+
+# Effect applied PER LEVEL for each stat (multiply by player's level to get total bonus)
+effects:
+  ATTACK_SPEED:
+    per-level: 0.02      # +2% attack speed per level (percentage modifier)
+  KNOCKBACK_RESISTANCE:
+    per-level: 0.02      # +2% knockback resistance per level (percentage modifier, capped naturally at 1.0 by MC)
+  ATTACK_DAMAGE:
+    per-level: 0.5       # +0.5 flat attack damage per level
+  LUCK:
+    per-level: 0.5       # +0.5 flat luck per level
+  MOVEMENT_SPEED:
+    per-level: 0.15      # +15% movement speed per unlocked level (toggleable, see below)
+  FLYING_SPEED:
+    per-level: 0.15      # +15% flying speed per level (creative/spectator/plugin-granted flight only, NOT elytra)
+  MAX_HEALTH:
+    per-level: 2.0       # +2 HP (1 heart) of max health per level
+
+gui:
+  title: "<gradient:#6a11cb:#b06ab3>Stat Upgrades</gradient>"
+  main-menu-lore-color: "<#9b59f5>"
+
+# Movement Speed is special: players UNLOCK levels permanently (one-time cost per level, same
+# curve as other stats) but can freely TOGGLE which unlocked level is currently active at no cost.
+# This lets players drop back down to a lower speed for precision tasks without losing progress.
+movement-speed:
+  allow-toggle: true
